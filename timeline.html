@@ -23,6 +23,7 @@ body{
 } 
 h2{
   width: 100%;
+  max-width: 100%;
   border: none
   text-align:left;
   resize:horizontal;
@@ -98,7 +99,7 @@ h1{
 }
 time{
   display: block;
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -107,7 +108,7 @@ hr{
   height: 2px;
   border: 0;
   border-top: 10px  double black;
-/*   margin: 1em 0; */
+/*  margin: 1em 0;*/
   padding: 0;
 }
 .hline-bottom{
@@ -145,7 +146,7 @@ figcaption{
 }
 img{ 
   display:inline-block;
-  max-width:390px;
+  max-width:100%;
   padding-top: 10px;
   padding-bottom:10px;
   height:auto;
@@ -197,6 +198,44 @@ input[type=text]{
 
 input[type=text]:focus{
     width: 100%;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+  img{
+    max-width:100%;
+  }
+  h2{
+    max-width:100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+  img{
+    max-width:100%;
+  }
+  h2{
+    max-width:100%;
+  }
+
 }
 </style>
 <body>
@@ -266,8 +305,8 @@ input[type=text]:focus{
 -->
 
 
-  <section class="timeline">
 
+  <section class="timeline">
     <ul>
       <li>
         <div>
