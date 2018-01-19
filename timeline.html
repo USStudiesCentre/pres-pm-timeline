@@ -1,215 +1,195 @@
 <!DOCTYPE html>
-  <html lang="eng-au">
+<html lang="eng-au">
 
-  <head>
-      <meta charset="utf-8">
-      <title>US Presidential - Australian Prime Ministerial Interactions 2001-2017</title>
-  </head>
-  <style type="text/css">
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font: normal 15px "Univers LT Pro", sans-serif;
-    color: black;
-    overflow-x: hidden;
-   /* display:flex;*/
-    padding-bottom: 50px;
-  }  /* INTRO SECTION
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-     
-  h2{
-    width: 10em;
-    border: none
-    text-align:left;
-    resize:horizontal;
-    display:flex;
-  }
-  h1 {
-    font-size: 2.5rem;
-    text-align:center;
-    font: 'Neo Sans Pro', sans-serif;
-  }
-  /* TIMELINE
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .timeline ul {
-    background: none;
-    padding: 50px 0;
-  }
-  .timeline ul li {
-    list-style-type: none;
-    position: relative;
-    width: 6px;
-    margin: 0 auto;
-    padding-top: 10px;
-    background: gray;
-  }
-  .timeline ul li::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: inherit;
-  }
-  .timeline ul li div {
-    position: relative;
-    bottom: 0;
-    width: 400px;
-    padding: 20px;
-    background: white;
-  }
-  .timeline ul li div::before {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-  }
-  .timeline ul li:nth-child(odd) div {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(odd) img {
-    left: -439px;
-  }
-  .timeline ul li:nth-child(odd) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent white transparent transparent;
-  }
-  .timeline ul li:nth-child(even) div {
-    left: -439px;
-  }
-  .timeline ul li:nth-child(odd) img {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(even) div::before {
-    right: -15px;
-    border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent white;
-  }
-  time {
-    display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  .timeline div{
-    flex-flow:row;
-  }
+<head>
+  <meta charset="utf-8">
+  <title>US Presidential - Australian Prime Ministerial Interactions 2001-2017</title>
+</head>
+<style type="text/css">
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: normal 15px "Univers LT Pro", sans-serif;
+  color: black;
+  resize:width;
+  overflow-x: hidden;
+  padding-bottom: 1000px;
+}  /* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h2{
+  width: 100%;
+  border: none
+  text-align:left;
+  resize:horizontal;
+  display:grid;
+}
+h1 {
+  font-size: 100%;
+  text-align:center;
+  font: 'Neo Sans Pro', sans-serif;
+}
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul {
+  background: none;
+  padding: 50px 0;
+  flex: 100%;
+  max-width: 100%;
+}
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 10px;
+  background: rgb(176,176,176);
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  height:80%;
+  width: 400px;
+  padding: 10px;
+  background: white;
+}
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+.timeline ul li:nth-child(odd) img {
+  left: -439px;
+}
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent white transparent transparent;
+}
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+.timeline ul li:nth-child(odd) img {
+  left: 45px;
+}
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent white;
+}
+time {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
 hr {
-    display: block;
-    height: 2px;
-    border: 0;
-    border-top: 10px  double black;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 10px  double black;
+  margin: 1em 0;
+  padding: 0;
 }
 .hline-bottom {
-    padding-bottom: 10px;
-    padding-left:20px;
-    border-bottom: 4px dashed #000; /* whichever color you prefer */
+  padding-bottom: 10px;
+  padding-left:20px;
+  border-bottom: 4px dashed #000; /* whichever color you prefer */
 }
-  /* EFFECTS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .timeline ul li::after {
-    transition: background .5s ease-in-out;
-  }
-  .timeline ul li.in-view::after {
-    background: #F45B69;
-  }
-  .timeline ul li div {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .5s ease-in-out;
-  }
-  .timeline ul li:nth-child(odd) div {
-    transform: translate3d(200px, 0, 0);
-  }
-  .timeline ul li:nth-child(even) div {
-    transform: translate3d(-200px, 0, 0);
-  }
-  .timeline ul li.in-view div {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-  }
-  figcaption {
-  
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+}
+.timeline ul li.in-view::after {
+  background: rgba(0,157,227,1);
+}
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+figure{
+  margin:none;
+}
+figcaption {
   font: light 5px;
 }
-  img{ display: inline-block;
-/*    max-width:100%;
-    height:auto*/;}
-   a:link {
-          color: red;
-          text-decoration: underline;
-          background-color: transparent;
-      }
-      a:visited {
-          color: red;
-          background-color: transparent;
-          text-decoration: none;
-      }
-      a:hover {
-          color: red;
-          background-color: transparent;
-          text-decoration: underline;
-      }
-      a:active {
-          color: red;
-          background-color: transparent;
-          text-decoration: underline;
-      }
-    line{
-      stroke-dasharray: 200;
-      stroke-dashoffset:200;
-      animation: offset 2s linear forwards;
-    }  
-    @keyframes offset{
-      to {
-        stroke-dashoffset:0;
-      }
-    }
-   
-  /* GENERAL MEDIA QUERIES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  @media screen and (max-width: 900px) {
-    .timeline ul li div {
-      width: 250px;
-    }
-    .timeline ul li:nth-child(even) div {
-      left: -289px;
-      /*250+45-6*/
-    }
+img{ 
+  display:inline-block;
+  max-width:390px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  height:auto;
+}
+a:link {
+  color: rgba(237,27,53,1);
+  text-decoration: underline;
+  background-color: transparent;
+}
+a:visited {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+line{
+  stroke-dasharray: 200;
+  stroke-dashoffset:200;
+  animation: offset 2s linear forwards;
+}  
+@keyframes offset{
+  to {
+    stroke-dashoffset:0;
   }
-  @media screen and (max-width: 600px) {
-    .timeline ul li {
-      margin-left: 20px;
-    }
-    .timeline ul li div {
-      width: calc(100vw - 91px);
-    }
-    .timeline ul li:nth-child(even) div {
-      left: 45px;
-    }
-    .timeline ul li:nth-child(even) div::before {
-      left: -15px;
-      border-width: 8px 16px 8px 0;
-      border-color: transparent #F45B69 transparent transparent;
-    }
-  }
-  </style>
+}
 
-  <body>
+</style>
+
+<body>
   <!-- <section class="intro">
     <div class="container">
       <h1>US Presidential - Australian Prime Ministerial Interactions 2001-2017</h1>
@@ -234,598 +214,597 @@ hr {
     <li style="color: gray">Place: Elsewhere</li>
     </h5>
     </div>
-  <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
+    <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
 
 
-  <section class="timeline">
-    <ul>
-      <li>
+    <section class="timeline">
+      <ul>
+        <li>
           <div>
-          <time>14 November 2017</time> 
-          <h2 style="color: grey; width:500px;">Where: Manila, Philippines</h2>
-          <h2 style="color: red; width:500px;">Type: Sideline meeting (ASEAN)</h2>
-         On his last day of the Asian summit season, Turnbull had a <a href="http://www.skynews.com.au/news/top-stories/2017/11/14/turnbull-meets-with-trump-in-manila.html" target="_blank">30-minute meeting</a> with Trump at the president’s hotel suite. The two leaders had originally <a href="http://www.smh.com.au/world/malcolm-turnbull-donald-trump-private-dinner-scrapped-20171113-gzkpqu.html" target="_blank">planned to meet for a private dinner</a> on Monday night, but it was rescheduled because the pair had met earlier in the day. No officials were present at the meeting.
-       <figure>
-          <img src="Trump-Duterte-Turnbull.jpg" alt="President Trump, President Duterte, PM Turnbull ASEAN" style="margin-left:-200%; margin-top:-180%;">
-          <figcaption style="margin-left:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-          </figure>   
-        </div>
-      </li>
-      <li>
-          <div>
-          <time>13 November 2017</time> 
-          <h2 style="color: grey; width:500px">Where: Manila, Philippines</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (ASEAN)</h2>
-          Turnbull held a <a href="https://www.pm.gov.au/media/trilateral-meeting-president-united-states-america-and-prime-minister-japan" target="_blank">trilateral meeting</a> with Trump and Japan’s Shinzo Abe on the sidelines of the ASEAN Summit – the first such trilateral since 2014. The leaders reiterated their shared “fundamental values” and “strategic interests” and emphasised their cooperation on dealing with North Korea. On trade, Trump noted that the United States had deficits with “almost everybody”, to which Turnbull quipped, “Except us!”
-      </div>
-      </li>
-      <li>
-        <div>
-          <time>7-8 July 2017</time> 
-          <h2 style="color: gray; width:500px">Where: Hamburg, Germany </h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-          Turnbull and Trump attended the G20 Summit where North Korea, trade, and terrorism topped the agenda. Turnbull and his wife, Lucy, joined the Trumps in ‘The Beast’ – the US President’s heavily armoured car – in which the two leaders had a <a href="http://www.abc.net.au/news/2017-07-08/turnbull-hitches-private-ride-in-trumps-armoured-vehicle/8690924" target="_blank">“good private discussion”.</a>
-  <!--         <img src="trump-turnbull-7.8.17.jpg" alt="President Trump and PM Turnbull G20 Germany" style="margin-left:-220%; margin-top:-50%;">  -->
-        </div>
-      </li>
-      <li>
-          <div>
-          <time>5 May 2017</time> 
-          <h2 style="color: rgb(255,195,0); width:400px">Where: USS Intrepid, New York, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-          Malcolm Turnbull’s first meeting with Donald Trump was aboard the USS Intrepid in commemoration of the 75th anniversary of the Battle of the Coral Sea. The pair held a 45-minute private meeting after an initial delay of almost three hours, as Trump had <a href="http://www.abc.net.au/news/2017-05-05/us-house-passes-healthcare-bill-in-major-trump-victory/8499138" target="_blank">remained in Washington</a> as a bill to repeal and replace Obamacare passed the House of Representatives. The leaders had a press conference where they played down the tensions from their infamous <a href="https://www.washingtonpost.com/world/national-security/no-gday-mate-on-call-with-australian-pm-trump-badgers-and-brags/2017/02/01/88a3bfb0-e8bf-11e6-80c2-30e57e57e05d_story.html?utm_term=.6710daf526dd" target="_blank">phone call</a> in January. Trump <a href="http://www.abc.net.au/news/2017-05-05/donald-trump-plays-down-malcolm-turnbull-tension-in-ny-meeting/8499146" target="_blank">labelled</a> Australia as “one of the great, great places” and announced that he would “absolutely” visit Australia as President. 
-          <figure>
-          <img src="trump-turnbull-5.5.17.jpg" alt="President Trump and PM Turnbull USS Intrepid NY" style="margin-left:130%; margin-top:-180%; display:inline-block;">
-          <figcaption style="margin-left:130%; margin-right:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>
-      </li>
-      <p style="margin-left:20px;"> President Trump was inaugurated on 20 January 2017</p>
-      <hr/> 
-      <li>
-        <div>
-          <time>20 November 2016</time> 
-          <h2 style="color: gray; width:500px">Where: Lima, Peru </h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-          On his final overseas trip as President, Barack Obama <a href="http://www.abc.net.au/news/2016-11-21/apec-summit-turnbull-talks-terrorism-trade-and-trump-with-world/8041244" target="_blank">held a 50-minute meeting</a> with Turnbull on the sidelines of the APEC Summit in Peru. The leaders discussed trade and foreign policy, with Turnbull reportedly eager to gauge Obama’s expectations of changes in US economic and security policy under the Trump administration. Turnbull concluded the interaction with a <a href="http://www.abc.net.au/news/2016-11-21/malcolm-turnbull,-barack-obama-selfie/8041606" target="_blank">selfie</a>.
-          <figure>
-          <img src="obama-turnbull-20.11.16.jpg" alt="President Obama and PM Turnbull APEC Peru" style="margin-left:-200%; margin-top:-100%;">
-          <figcaption style="margin-left:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-          </figure>    
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>20 September 2016</time> 
-          <h2 style="color: rgb(255,195,0); width:500px">Where: New York City, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (United Nations General Assembly) </h2>
-          Turnbull gave his <a href="https://www.malcolmturnbull.com.au/media/doorstop-new-york-un-general-assembly" target="_blank">first speech</a> at the United Nations General Assembly and was invited to attend a <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/09/20/remarks-president-obama-leaders-summit-refugees" target="_blank">special summit on refugees</a> at Obama’s invitation. 
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>6-8 September 2016</time>
-          <h2 style="color: gray; width:500px">Where: Vientiane, Laos</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (East Asia Summit) </h2>
-          Turnbull and Obama attended the East Asia Summit in Vientiane.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>4-5 September 2016</time>
-          <h2 style="color: gray; width:500px">Where: Hangzhou, China</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-          Turnbull and Obama managed a <a href="http://cdn.newsapi.com.au/image/v1/c349183a05a0415e34eea643d55bc522" target="_blank">brief greeting</a> at the G20 Summit in China.
-        </div>
-      </li>
-      <div class="block_1 hline-bottom">The Turnbull Government was re-elected on 2 July 2016</div> <br>
-      <li>
-        <div>
-          <time>19 January 2016</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Office bilateral (United States) </h2>
-          This was Turnbull’s first trip to Washington as prime minister. During his two-day visit he delivered the national security <a href="https://www.pm.gov.au/media/2016-01-18/australia-and-united-states-new-responsibilities-enduring-partnership" target="_blank">address</a> at the Center for Strategic and International Studies, held a working dinner with <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/malcolm-turnbull-speaks-to-presidential-contenders-clinton-rubio/news-story/ad9814b4ce9e952ac80d17f790b6ddeb" target="_blank">Congressional leaders</a>, and was invited to stay at the President’s guesthouse, an honour that had not been extended to Tony Abbott. Turnbull had <a href="http://www.smh.com.au/world/prime-minister-malcolm-turnbull-greeted-warmly-by-barack-obama-20160119-gm9i09.html" target="_blank">a 90-minute meeting</a> followed by lunch at the White House with the US President. Both leaders <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/01/19/remarks-president-obama-and-prime-minister-turnbull-australia-bilateral" target="_blank">reiterated</a> the strength of the US-Australia alliance, with Obama noting that he was “grateful for our friendship” and Turnbull highlighting that “right across the board, we have so much in common.”
-          <figure>
-          <img src="obama-turnbull-19.1.16.jpg" alt="President Obama and PM Turnbull White House 2016" style="margin-left:-200%; margin-top:-200%;">  
-          <figcaption style="margin-left:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-          </figure>    
-        </div>
-      </li>
-      <li>
-          <div>
-          <time>30 November - 11 December 2015</time>
-          <h2 style="color: gray; width:500px">Where: Paris, France</h2>
-          <h2 style="color: navy; width:400px">Type: Informal (Paris Climate Conference) </h2>
-         Both Turnbull and Obama attended the 21st session of the Conference of the Parties (COP 21) for the United Nations Climate Change Summit. 
-        </div>
-      </li>
-      <li>
-          <div>
-          <time>18-22 November 2015</time>
-          <h2 style="color: gray; width:500px">Where: Kuala Lumpur, Malaysia</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (ASEAN/East Asia Summit) </h2>
-          Turnbull and Obama <a href="http://www.abc.net.au/news/2015-11-21/obama-urges-halt-to-island-building-in-south-china-sea/6961474" target="_blank">attended the ASEAN and East Asia Summits</a> in Malaysia. The South China Sea figured prominently, with leaders expressing “<a href="http://www.asean.org/wp-content/uploads/images/2015/November/10th-EAS-Outcome/Chairmans Statement of the 10th East Asia Summit Final.pdf" target="_blank">serious concerns</a>” over developments in the region that “have resulted in the erosion of trust and confidence”.
+            <time>14 November 2017</time> 
+            <h2 style="color: grey;">Where: Manila, Philippines</h2>
+            <h2 style="color: red;">Type: Sideline meeting (ASEAN)</h2>
+            On his last day of the Asian summit season, Turnbull had a <a href="http://www.skynews.com.au/news/top-stories/2017/11/14/turnbull-meets-with-trump-in-manila.html" target="_blank">30-minute meeting</a> with Trump at the president’s hotel suite. The two leaders had originally <a href="http://www.smh.com.au/world/malcolm-turnbull-donald-trump-private-dinner-scrapped-20171113-gzkpqu.html" target="_blank">planned to meet for a private dinner</a> on Monday night, but it was rescheduled because the pair had met earlier in the day. No officials were present at the meeting.
+            <figure>
+              <img src="Trump-Duterte-Turnbull.jpg" alt="President Trump, President Duterte, PM Turnbull ASEAN">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>   
           </div>
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>17 November 2015</time>
-          <h2 style="color: gray; width:500px">Where: Manila, Philippines</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Turnbull’s <a href="https://obamawhitehouse.archives.gov/the-press-office/2015/11/17/remarks-president-obama-and-prime-minister-malcolm-turnbull-commonwealth" target="_blank">first formal meeting</a> with Obama occurred <a href="http://www.smh.com.au/federal-politics/political-news/apec-malcolm-turnbull-and-barack-obama-hit-it-off-resist-pressure-for-troops-in-syria-20151117-gl18hw.html" target="_blank">on the sidelines</a> of the 2015 APEC summit in Manila. The leaders had a “<a href="https://obamawhitehouse.archives.gov/the-press-office/2015/11/17/remarks-president-obama-and-prime-minister-malcolm-turnbull-commonwealth" target="_blank">lengthy discussion</a>” on issues including the Trans-Pacific Partnership, a unified response to ISIL, and the importance of freedom of navigation and maritime rules. Both leaders were resisting strong domestic pressures to commit more troops to Syria following <a href='http://www.abc.net.au/news/2015-11-14/paris-attacks-120-dead-in-shootings-explosions/6940722' target="_blank">terrorist attacks</a> in Paris. Obama extended an invitation to Turnbull to visit the White House.
-     
-       <figure>
-           <img src="obama-turnbull-17.11.15.jpg" alt="President Obama and PM Turnbull APEC Philipines" style="margin-left:130%; margin-top:-180%; display:inline-block;">
-          <figcaption style="margin-left:130%; margin-right:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>13 November 2017</time> 
+            <h2 style="color: grey;">Where: Manila, Philippines</h2>
+            <h2 style="color: red;">Type: Sideline meeting (ASEAN)</h2>
+            Turnbull held a <a href="https://www.pm.gov.au/media/trilateral-meeting-president-united-states-america-and-prime-minister-japan" target="_blank">trilateral meeting</a> with Trump and Japan’s Shinzo Abe on the sidelines of the ASEAN Summit – the first such trilateral since 2014. The leaders reiterated their shared “fundamental values” and “strategic interests” and emphasised their cooperation on dealing with North Korea. On trade, Trump noted that the United States had deficits with “almost everybody”, to which Turnbull quipped, “Except us!”
           </div>
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>16 November 2015</time>
-          <h2 style="color: gray; width:500px">Where: Antalya, Turkey</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      The G20 Summit in Turkey was the first opportunity for Turnbull and Obama to work together.
+            <time>7-8 July 2017</time> 
+            <h2 style="color: gray;">Where: Hamburg, Germany </h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Turnbull and Trump attended the G20 Summit where North Korea, trade, and terrorism topped the agenda. Turnbull and his wife, Lucy, joined the Trumps in ‘The Beast’ – the US President’s heavily armoured car – in which the two leaders had a <a href="http://www.abc.net.au/news/2017-07-08/turnbull-hitches-private-ride-in-trumps-armoured-vehicle/8690924" target="_blank">“good private discussion”.</a>
+            <!--         <img src="trump-turnbull-7.8.17.jpg" alt="President Trump and PM Turnbull G20 Germany" style="margin-left:-220%; margin-top:-50%;">  -->
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>5 May 2017</time> 
+            <h2 style="color: rgb(255,195,0); width:400px">Where: USS Intrepid, New York, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Malcolm Turnbull’s first meeting with Donald Trump was aboard the USS Intrepid in commemoration of the 75th anniversary of the Battle of the Coral Sea. The pair held a 45-minute private meeting after an initial delay of almost three hours, as Trump had <a href="http://www.abc.net.au/news/2017-05-05/us-house-passes-healthcare-bill-in-major-trump-victory/8499138" target="_blank">remained in Washington</a> as a bill to repeal and replace Obamacare passed the House of Representatives. The leaders had a press conference where they played down the tensions from their infamous <a href="https://www.washingtonpost.com/world/national-security/no-gday-mate-on-call-with-australian-pm-trump-badgers-and-brags/2017/02/01/88a3bfb0-e8bf-11e6-80c2-30e57e57e05d_story.html?utm_term=.6710daf526dd" target="_blank">phone call</a> in January. Trump <a href="http://www.abc.net.au/news/2017-05-05/donald-trump-plays-down-malcolm-turnbull-tension-in-ny-meeting/8499146" target="_blank">labelled</a> Australia as “one of the great, great places” and announced that he would “absolutely” visit Australia as President. 
+            <figure>
+              <img src="trump-turnbull-5.5.17.jpg" alt="President Trump and PM Turnbull USS Intrepid NY">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>
+        </li>
+        <p style="margin-left:20px;"> President Trump was inaugurated on 20 January 2017</p>
+        <hr/> 
+        <li>
+          <div>
+            <time>20 November 2016</time> 
+            <h2 style="color: gray;">Where: Lima, Peru </h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            On his final overseas trip as President, Barack Obama <a href="http://www.abc.net.au/news/2016-11-21/apec-summit-turnbull-talks-terrorism-trade-and-trump-with-world/8041244" target="_blank">held a 50-minute meeting</a> with Turnbull on the sidelines of the APEC Summit in Peru. The leaders discussed trade and foreign policy, with Turnbull reportedly eager to gauge Obama’s expectations of changes in US economic and security policy under the Trump administration. Turnbull concluded the interaction with a <a href="http://www.abc.net.au/news/2016-11-21/malcolm-turnbull,-barack-obama-selfie/8041606" target="_blank">selfie</a>.
+            <figure>
+              <img src="obama-turnbull-20.11.16.jpg" alt="President Obama and PM Turnbull APEC Peru">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>    
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>20 September 2016</time> 
+            <h2 style="color: rgb(255,195,0);">Where: New York City, United States</h2>
+            <h2 style="color: navy;">Type: Informal (United Nations General Assembly) </h2>
+            Turnbull gave his <a href="https://www.malcolmturnbull.com.au/media/doorstop-new-york-un-general-assembly" target="_blank">first speech</a> at the United Nations General Assembly and was invited to attend a <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/09/20/remarks-president-obama-leaders-summit-refugees" target="_blank">special summit on refugees</a> at Obama’s invitation. 
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>6-8 September 2016</time>
+            <h2 style="color: gray;">Where: Vientiane, Laos</h2>
+            <h2 style="color: navy;">Type: Informal (East Asia Summit) </h2>
+            Turnbull and Obama attended the East Asia Summit in Vientiane.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>4-5 September 2016</time>
+            <h2 style="color: gray;">Where: Hangzhou, China</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Turnbull and Obama managed a <a href="http://cdn.newsapi.com.au/image/v1/c349183a05a0415e34eea643d55bc522" target="_blank">brief greeting</a> at the G20 Summit in China.
+          </div>
+        </li>
+        <div class="block_1 hline-bottom">The Turnbull Government was re-elected on 2 July 2016</div> <br>
+        <li>
+          <div>
+            <time>19 January 2016</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Office bilateral (United States) </h2>
+            This was Turnbull’s first trip to Washington as prime minister. During his two-day visit he delivered the national security <a href="https://www.pm.gov.au/media/2016-01-18/australia-and-united-states-new-responsibilities-enduring-partnership" target="_blank">address</a> at the Center for Strategic and International Studies, held a working dinner with <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/malcolm-turnbull-speaks-to-presidential-contenders-clinton-rubio/news-story/ad9814b4ce9e952ac80d17f790b6ddeb" target="_blank">Congressional leaders</a>, and was invited to stay at the President’s guesthouse, an honour that had not been extended to Tony Abbott. Turnbull had <a href="http://www.smh.com.au/world/prime-minister-malcolm-turnbull-greeted-warmly-by-barack-obama-20160119-gm9i09.html" target="_blank">a 90-minute meeting</a> followed by lunch at the White House with the US President. Both leaders <a href="https://obamawhitehouse.archives.gov/the-press-office/2016/01/19/remarks-president-obama-and-prime-minister-turnbull-australia-bilateral" target="_blank">reiterated</a> the strength of the US-Australia alliance, with Obama noting that he was “grateful for our friendship” and Turnbull highlighting that “right across the board, we have so much in common.”
+            <figure>
+              <img src="obama-turnbull-19.1.16.jpg" alt="President Obama and PM Turnbull White House 2016">  
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>    
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>30 November - 11 December 2015</time>
+            <h2 style="color: gray;">Where: Paris, France</h2>
+            <h2 style="color: navy; width:400px">Type: Informal (Paris Climate Conference) </h2>
+            Both Turnbull and Obama attended the 21st session of the Conference of the Parties (COP 21) for the United Nations Climate Change Summit. 
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>18-22 November 2015</time>
+            <h2 style="color: gray;">Where: Kuala Lumpur, Malaysia</h2>
+            <h2 style="color: navy;">Type: Informal (ASEAN/East Asia Summit) </h2>
+            Turnbull and Obama <a href="http://www.abc.net.au/news/2015-11-21/obama-urges-halt-to-island-building-in-south-china-sea/6961474" target="_blank">attended the ASEAN and East Asia Summits</a> in Malaysia. The South China Sea figured prominently, with leaders expressing “<a href="http://www.asean.org/wp-content/uploads/images/2015/November/10th-EAS-Outcome/Chairmans Statement of the 10th East Asia Summit Final.pdf" target="_blank">serious concerns</a>” over developments in the region that “have resulted in the erosion of trust and confidence”.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>17 November 2015</time>
+            <h2 style="color: gray;">Where: Manila, Philippines</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Turnbull’s <a href="https://obamawhitehouse.archives.gov/the-press-office/2015/11/17/remarks-president-obama-and-prime-minister-malcolm-turnbull-commonwealth" target="_blank">first formal meeting</a> with Obama occurred <a href="http://www.smh.com.au/federal-politics/political-news/apec-malcolm-turnbull-and-barack-obama-hit-it-off-resist-pressure-for-troops-in-syria-20151117-gl18hw.html" target="_blank">on the sidelines</a> of the 2015 APEC summit in Manila. The leaders had a “<a href="https://obamawhitehouse.archives.gov/the-press-office/2015/11/17/remarks-president-obama-and-prime-minister-malcolm-turnbull-commonwealth" target="_blank">lengthy discussion</a>” on issues including the Trans-Pacific Partnership, a unified response to ISIL, and the importance of freedom of navigation and maritime rules. Both leaders were resisting strong domestic pressures to commit more troops to Syria following <a href='http://www.abc.net.au/news/2015-11-14/paris-attacks-120-dead-in-shootings-explosions/6940722' target="_blank">terrorist attacks</a> in Paris. Obama extended an invitation to Turnbull to visit the White House.
+            <figure>
+              <img src="obama-turnbull-17.11.15.jpg" alt="President Obama and PM Turnbull APEC Philipines">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>16 November 2015</time>
+            <h2 style="color: gray;">Where: Antalya, Turkey</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            The G20 Summit in Turkey was the first opportunity for Turnbull and Obama to work together.
           </div>    
         </li>
-         <p style="margin:20px;">Malcolm Turnbull successfully challenged Tony Abbott for the leadership of the Liberal Party and was sworn in as Prime Minister of Australia on 15 September 2015</p>
-     <hr/>
-      <li>
+        <p style="margin:20px;">Malcolm Turnbull successfully challenged Tony Abbott for the leadership of the Liberal Party and was sworn in as Prime Minister of Australia on 15 September 2015</p>
+        <hr/>
+        <li>
           <div>
-          <time>15-16 November 2014</time>
-          <h2 style="color: rgb(12, 133, 71); width:500px">Where: Brisbane, Australia</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (G20) </h2>
-      Abbott and Obama <a href="http://www.abc.net.au/news/2014-11-16/australia-japan-united-states-trilateral-talks-g20/5894988" target="_blank">met with Japan’s Shinzo Abe</a> for a trilateral meeting on the sidelines of the G20 Leaders’ Summit in Brisbane. According to the <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/11/15/australia-japan-united-states-trilateral-leaders-meeting-joint-media-rel" target="_blank">joint media release</a>, the main topics of discussion included how to defeat ISIL and ending the Ebola outbreak, with the leaders also united in opposing Russia’s destabilisation of Ukraine. Tensions surfaced over climate change: Obama <a href="http://www.smh.com.au/federal-politics/political-news/g20-summit-barack-obama-puts-climate-change-at-fore-in-speech-at-university-of-queensland-20141115-11ndmg.html" target="_blank">announced</a> a $3 billion commitment to the Green Climate Fund at a speech at the University of Queensland, while Tony Abbott <a href="http://www.smh.com.au/federal-politics/political-news/g20-summit-barack-obama-puts-climate-change-at-fore-in-speech-at-university-of-queensland-20141115-11ndmg.html" target="_blank">spoke of his repeal</a> of Labor’s carbon tax in a speech to world leaders, including Obama.
-        <figure>
-       <img src="obama-abbott-15.11.14.jpg" alt="President Obama and PM Abbott G20 Brisbane" style="margin-left:130%; margin-top:-180%; display:inline-block;">
-        <figcaption style="margin-left:130%; margin-right:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>15-16 November 2014</time>
+            <h2 style="color: rgb(12, 133, 71);">Where: Brisbane, Australia</h2>
+            <h2 style="color: red;">Type: Sideline meeting (G20) </h2>
+            Abbott and Obama <a href="http://www.abc.net.au/news/2014-11-16/australia-japan-united-states-trilateral-talks-g20/5894988" target="_blank">met with Japan’s Shinzo Abe</a> for a trilateral meeting on the sidelines of the G20 Leaders’ Summit in Brisbane. According to the <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/11/15/australia-japan-united-states-trilateral-leaders-meeting-joint-media-rel" target="_blank">joint media release</a>, the main topics of discussion included how to defeat ISIL and ending the Ebola outbreak, with the leaders also united in opposing Russia’s destabilisation of Ukraine. Tensions surfaced over climate change: Obama <a href="http://www.smh.com.au/federal-politics/political-news/g20-summit-barack-obama-puts-climate-change-at-fore-in-speech-at-university-of-queensland-20141115-11ndmg.html" target="_blank">announced</a> a $3 billion commitment to the Green Climate Fund at a speech at the University of Queensland, while Tony Abbott <a href="http://www.smh.com.au/federal-politics/political-news/g20-summit-barack-obama-puts-climate-change-at-fore-in-speech-at-university-of-queensland-20141115-11ndmg.html" target="_blank">spoke of his repeal</a> of Labor’s carbon tax in a speech to world leaders, including Obama.
+            <figure>
+              <img src="obama-abbott-15.11.14.jpg" alt="President Obama and PM Abbott G20 Brisbane">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>12-13 November 2014</time>
-          <h2 style="color: gray; width:500px">Where: Naypyidaw, Myanmar</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (ASEAN/East Asia Summit) </h2>
-      Abbott and Obama attended the ASEAN and East Asia Summits in Myanmar.
+            <time>12-13 November 2014</time>
+            <h2 style="color: gray;">Where: Naypyidaw, Myanmar</h2>
+            <h2 style="color: navy;">Type: Informal (ASEAN/East Asia Summit) </h2>
+            Abbott and Obama attended the ASEAN and East Asia Summits in Myanmar.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>10 November 2014</time>
-          <h2 style="color: gray; width:500px">Where: Beijing, China</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Obama held a <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/11/10/remarks-president-obama-and-prime-minister-abbott-australia-after-bilate" target="_blank">bilateral meeting</a> with Abbott on the sidelines of APEC. They discussed the coalition against ISIL and the importance of the upcoming G20 Summit.
-     <!--      <img src="obama-abbott-10.11.14.jpg" alt="President Obama and PM Abbott China G20" style="margin-left:130%; margin-top:-180%; display:inline-block; width:500px; height:500px"> -->
+            <time>10 November 2014</time>
+            <h2 style="color: gray;">Where: Beijing, China</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Obama held a <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/11/10/remarks-president-obama-and-prime-minister-abbott-australia-after-bilate" target="_blank">bilateral meeting</a> with Abbott on the sidelines of APEC. They discussed the coalition against ISIL and the importance of the upcoming G20 Summit.
+            <!--      <img src="obama-abbott-10.11.14.jpg" alt="President Obama and PM Abbott China G20" style="margin-left:130%; margin-top:-180%; display:inline-block;; height:500px"> -->
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>24-25 September 2014</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: New York City, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (United Nations Security Council) </h2>
-      Abbott participated in a <a href="http://www.abc.net.au/news/2014-09-11/abbott-to-attend-un-security-council-meeting/5737940" target="_blank">meeting</a> at the United Nations Security Council convened by Obama, which focussed on the war against ISIL.
+            <time>24-25 September 2014</time>
+            <h2 style="color: rgb(255,195,0);">Where: New York City, United States</h2>
+            <h2 style="color: navy;">Type: Informal (United Nations Security Council) </h2>
+            Abbott participated in a <a href="http://www.abc.net.au/news/2014-09-11/abbott-to-attend-un-security-council-meeting/5737940" target="_blank">meeting</a> at the United Nations Security Council convened by Obama, which focussed on the war against ISIL.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>12 June 2014</time>
-          <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Obama hosted Abbott in the Oval Office during the Australian leader’s first United States visit as prime minister. Abbott followed in the footsteps of Julia Gillard and Kevin Rudd by <a href="http://www.smh.com.au/federal-politics/political-news/tony-abbott-fulfils-wish-to-dine-with-rupert-murdoch-in-new-york-20140611-39wsh.html" target="_blank">meeting with Rupert Murdoch</a> in New York before heading to the White House. <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/06/12/remarks-president-obama-and-prime-minister-abbott-australia-after-bilate" target="_blank">Key topics</a> of discussion in the bilateral meeting included additional agreements around force postures and the need to push towards finalisation of the Trans-Pacific Partnership, while the leaders took different approaches to climate change.
-      <figure>
-       <img src="obama-abbott-12.6.14-1.jpg" alt="President Obama and PM Abbott White House" style="margin-left:130%; margin-top:-180%; display:inline-block;">
-       <figcaption style="margin-left:130%; margin-right:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>12 June 2014</time>
+            <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Obama hosted Abbott in the Oval Office during the Australian leader’s first United States visit as prime minister. Abbott followed in the footsteps of Julia Gillard and Kevin Rudd by <a href="http://www.smh.com.au/federal-politics/political-news/tony-abbott-fulfils-wish-to-dine-with-rupert-murdoch-in-new-york-20140611-39wsh.html" target="_blank">meeting with Rupert Murdoch</a> in New York before heading to the White House. <a href="https://obamawhitehouse.archives.gov/the-press-office/2014/06/12/remarks-president-obama-and-prime-minister-abbott-australia-after-bilate" target="_blank">Key topics</a> of discussion in the bilateral meeting included additional agreements around force postures and the need to push towards finalisation of the Trans-Pacific Partnership, while the leaders took different approaches to climate change.
+            <figure>
+              <img src="obama-abbott-12.6.14-1.jpg" alt="President Obama and PM Abbott White House">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-       <p style="margin:20px;">Tony Abbott led the Coalition to victory in the federal election and was sworn in as Prime Minister on 18 September 2013</p>
-     <hr/>
-       <div class="block_1 hline-bottom">Kevin Rudd successfully challenged Julia Gillard for the leadership of the Labor Party and was sworn in as Prime Minister of Australia on 27 June 2013</div> <br>
-      <div class="block_1 hline-bottom">President Obama was inaugurated President for the second time on 20 January 2013</div> <br>
-      <li>
+        </li>
+        <p style="margin:20px;">Tony Abbott led the Coalition to victory in the federal election and was sworn in as Prime Minister on 18 September 2013</p>
+        <hr/>
+        <div class="block_1 hline-bottom">Kevin Rudd successfully challenged Julia Gillard for the leadership of the Labor Party and was sworn in as Prime Minister of Australia on 27 June 2013</div> <br>
+        <div class="block_1 hline-bottom">President Obama was inaugurated President for the second time on 20 January 2013</div> <br>
+        <li>
           <div>
-          <time>19 November 2012</time>
-          <h2 style="color: gray; width:500px">Where: Phnom Penh, Cambodia</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (East Asia Summit) </h2>
-      This was Gillard’s first meeting with Obama since he was re-elected to a second term. Gillard sat next to Obama at the meeting and had a “<a href="http://www.abc.net.au/lateline/content/2012/s3637270.htm" target="_blank">wide-ranging discussion</a>” with the President.
+            <time>19 November 2012</time>
+            <h2 style="color: gray;">Where: Phnom Penh, Cambodia</h2>
+            <h2 style="color: navy;">Type: Informal (East Asia Summit) </h2>
+            This was Gillard’s first meeting with Obama since he was re-elected to a second term. Gillard sat next to Obama at the meeting and had a “<a href="http://www.abc.net.au/lateline/content/2012/s3637270.htm" target="_blank">wide-ranging discussion</a>” with the President.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>25-26 September 2012</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: New York City, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (United Nations General Assembly) </h2>
-      <a href="http://www.abc.net.au/news/2012-09-27/gillard-addresses-un-general-assembly/4282652">Gillard</a> and <a href="https://obamawhitehouse.archives.gov/blog/2012/09/25/president-obama-addresses-united-nations" target="_blank">Obama</a> both addressed the United Nations General Assembly in New York.
+            <time>25-26 September 2012</time>
+            <h2 style="color: rgb(255,195,0);">Where: New York City, United States</h2>
+            <h2 style="color: navy;">Type: Informal (United Nations General Assembly) </h2>
+            <a href="http://www.abc.net.au/news/2012-09-27/gillard-addresses-un-general-assembly/4282652">Gillard</a> and <a href="https://obamawhitehouse.archives.gov/blog/2012/09/25/president-obama-addresses-united-nations" target="_blank">Obama</a> both addressed the United Nations General Assembly in New York.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>18-19 June 2012</time>
-          <h2 style="color: gray; width:500px">Where: Los Cabos, Mexico</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Gillard and Obama attended the G20 Summit in Mexico and <a href="http://www.heraldsun.com.au/business/dont-give-eu-commission-chief-jose-manuel-barroso-lessons-on-economy/news-story/2e191bd7db96448bdf4deba0fc2086aa" target="_blank">shared a light-hearted moment</a> during the official photograph. 
-      <figure>
-       <img src="obama-gillard-18.6.12.jpg" alt="President Obama and PM Gillard Mexico 2012" style="margin-left:-150%; margin-top:-200%; height:280px; width:400px">  
-       <figcaption style="margin-left:-150%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>18-19 June 2012</time>
+            <h2 style="color: gray;">Where: Los Cabos, Mexico</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Gillard and Obama attended the G20 Summit in Mexico and <a href="http://www.heraldsun.com.au/business/dont-give-eu-commission-chief-jose-manuel-barroso-lessons-on-economy/news-story/2e191bd7db96448bdf4deba0fc2086aa" target="_blank">shared a light-hearted moment</a> during the official photograph. 
+            <figure>
+              <img src="obama-gillard-18.6.12.jpg" alt="President Obama and PM Gillard Mexico 2012">  
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>20 May 2012</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Chicago, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (NATO) </h2>
-      Obama hosted a NATO Summit in Chicago where Julia Gillard <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/pay-up-for-afghanistan-gillard-urges-world-leaders-at-nato-summit/news-story/48c429bac23fe4e96bf3b1645f01ab8b" target="_blank">called on world leaders</a> to fund Afghanistan’s security forces. 
+            <time>20 May 2012</time>
+            <h2 style="color: rgb(255,195,0);">Where: Chicago, United States</h2>
+            <h2 style="color: navy;">Type: Informal (NATO) </h2>
+            Obama hosted a NATO Summit in Chicago where Julia Gillard <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/pay-up-for-afghanistan-gillard-urges-world-leaders-at-nato-summit/news-story/48c429bac23fe4e96bf3b1645f01ab8b" target="_blank">called on world leaders</a> to fund Afghanistan’s security forces. 
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>26-27 March 2012</time>
-          <h2 style="color: gray; width:500px">Where: Seoul, South Korea</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (Nuclear Security Summit) </h2>
-      Gillard and Obama <a href="http://www.abc.net.au/news/2012-03-27/barack-obama-speaks-with-julia-gillard/3914300" target="_blank">spoke informally</a> before the working dinner in Seoul.
+            <time>26-27 March 2012</time>
+            <h2 style="color: gray;">Where: Seoul, South Korea</h2>
+            <h2 style="color: navy;">Type: Informal (Nuclear Security Summit) </h2>
+            Gillard and Obama <a href="http://www.abc.net.au/news/2012-03-27/barack-obama-speaks-with-julia-gillard/3914300" target="_blank">spoke informally</a> before the working dinner in Seoul.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>19 November 2011</time>
-          <h2 style="color: gray; width:500px">Where: Bali, Indonesia</h2>
-          <h2 style="color: navy; width:400px">Type: Informal (ASEAN/East Asia Summit) </h2>
-      Gillard and Obama attended the East Asia Summit, where the pair managed a <a href="http://www.abc.net.au/news/2012-11-20/pm-julia-gillard-greet-us-president-barack-obama-at-east-asia-s/4380938" target="_blank">short greeting</a>. This was the first time a US President had attended the East Asian Summit. 
-      <figure>
-      <img src="obama-gillard-19.11.11.jpg" alt="President Obama and PM Gillard EAS Bali" style="margin-left:130%; margin-top:-80%; display:inline-block;">
-      <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>19 November 2011</time>
+            <h2 style="color: gray;">Where: Bali, Indonesia</h2>
+            <h2 style="color: navy; width:400px">Type: Informal (ASEAN/East Asia Summit) </h2>
+            Gillard and Obama attended the East Asia Summit, where the pair managed a <a href="http://www.abc.net.au/news/2012-11-20/pm-julia-gillard-greet-us-president-barack-obama-at-east-asia-s/4380938" target="_blank">short greeting</a>. This was the first time a US President had attended the East Asian Summit. 
+            <figure>
+              <img src="obama-gillard-19.11.11.jpg" alt="President Obama and PM Gillard EAS Bali">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>16-17 November 2011</time>
-          <h2 style="color: rgb(12, 133, 71); width:500px">Where: Parliament House, Canberra/Darwin, Northern Territory</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (Australia) </h2>
-      On his first visit to Australia as president, Obama and Gillard <a href="https://obamawhitehouse.archives.gov/the-press-office/2011/11/16/remarks-president-obama-and-prime-minister-gillard-australia-joint-press" target="_blank">discussed</a> trade liberalisation and <a href="http://www.abc.net.au/news/2011-11-16/gillard2c-obama-announce-darwin-troop-deployment/3675596" target="_blank">announced</a> that 2,500 US Marines would be stationed in Darwin on a rotational basis under the <a href="http://webcache.googleusercontent.com/search?q=cache:u3jxx4Xq-mwJ:www.aph.gov.au/~/media/02%2520Parliamentary%2520Business/24%2520Committees/244%2520Joint%2520Committees/JSCT/2014/2september2014/Report%2520145/Chapter2.pdf%3Fla%3Den.+&cd=1&hl=en&c" target="_blank">US-Australia Force Posture Agreement</a>. He <a href="http://www.smh.com.au/national/text-of-obamas-speech-to-parliament-20111117-1nkcw.html?rand=1321508407547" target="_blank">addressed</a> the Australian Parliament in Canberra where he declared that “the United States is a Pacific power” and is “<a href="https://www.theguardian.com/world/2011/nov/17/obama-asia-pacific-address-australia-parliament" target="_blank">here to stay</a>” – an indication of his ‘pivot’, later ‘rebalance’, to Asia. Obama <a href="http://www.smh.com.au/federal-politics/political-opinion/obama-enlists-us-on-side-of-the-free-20111116-1njy8" target="_blank">condemned</a> the Chinese government’s suppression of its citizens’ political rights and <a href="http://www.abc.net.au/news/2011-11-17/barack-obama-touches-down-in-darwin/3677708" target="_blank">visited an air force base in Darwin</a>, where he addressed US Marines and Australian troops.
-      <figure>
-      <img src="obama-gillard-16.11.11.jpg" alt="President Obama and PM Gillard Australia" style="margin-left:-200%; margin-top:-180%; display:inline-block;">
-      <figcaption style="margin-left:-200%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>16-17 November 2011</time>
+            <h2 style="color: rgb(12, 133, 71);">Where: Parliament House, Canberra/Darwin, Northern Territory</h2>
+            <h2 style="color: black;">Type: Official bilateral (Australia) </h2>
+            On his first visit to Australia as president, Obama and Gillard <a href="https://obamawhitehouse.archives.gov/the-press-office/2011/11/16/remarks-president-obama-and-prime-minister-gillard-australia-joint-press" target="_blank">discussed</a> trade liberalisation and <a href="http://www.abc.net.au/news/2011-11-16/gillard2c-obama-announce-darwin-troop-deployment/3675596" target="_blank">announced</a> that 2,500 US Marines would be stationed in Darwin on a rotational basis under the <a href="http://webcache.googleusercontent.com/search?q=cache:u3jxx4Xq-mwJ:www.aph.gov.au/~/media/02%2520Parliamentary%2520Business/24%2520Committees/244%2520Joint%2520Committees/JSCT/2014/2september2014/Report%2520145/Chapter2.pdf%3Fla%3Den.+&cd=1&hl=en&c" target="_blank">US-Australia Force Posture Agreement</a>. He <a href="http://www.smh.com.au/national/text-of-obamas-speech-to-parliament-20111117-1nkcw.html?rand=1321508407547" target="_blank">addressed</a> the Australian Parliament in Canberra where he declared that “the United States is a Pacific power” and is “<a href="https://www.theguardian.com/world/2011/nov/17/obama-asia-pacific-address-australia-parliament" target="_blank">here to stay</a>” – an indication of his ‘pivot’, later ‘rebalance’, to Asia. Obama <a href="http://www.smh.com.au/federal-politics/political-opinion/obama-enlists-us-on-side-of-the-free-20111116-1njy8" target="_blank">condemned</a> the Chinese government’s suppression of its citizens’ political rights and <a href="http://www.abc.net.au/news/2011-11-17/barack-obama-touches-down-in-darwin/3677708" target="_blank">visited an air force base in Darwin</a>, where he addressed US Marines and Australian troops.
+            <figure>
+              <img src="obama-gillard-16.11.11.jpg" alt="President Obama and PM Gillard Australia">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>10-13 November 2011</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Honolulu, United States</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Gillard and Obama <a href="http://www.abc.net.au/news/2011-11-14/julia-gillard-gives-barack-obama-a-kiss-when-they-meet-at-apec-/3664090" target="_blank">met</a> at the APEC Summit in Hawaii amidst concerns over America’s commitment to the Trans-Pacific Partnership. Gillard stated that Obama remained committed to the trade deal and the two leaders <a href="http://www.abc.net.au/news/2011-11-13/gillard-meets-with-obama-today-at-apec/3663104" target="_blank">met to discuss</a> the partnership.
+            <time>10-13 November 2011</time>
+            <h2 style="color: rgb(255,195,0);">Where: Honolulu, United States</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Gillard and Obama <a href="http://www.abc.net.au/news/2011-11-14/julia-gillard-gives-barack-obama-a-kiss-when-they-meet-at-apec-/3664090" target="_blank">met</a> at the APEC Summit in Hawaii amidst concerns over America’s commitment to the Trans-Pacific Partnership. Gillard stated that Obama remained committed to the trade deal and the two leaders <a href="http://www.abc.net.au/news/2011-11-13/gillard-meets-with-obama-today-at-apec/3663104" target="_blank">met to discuss</a> the partnership.
           </div>    
-      </li>    
-      <li>
+        </li>    
+        <li>
           <div>
-          <time>3-4 November 2011</time>
-          <h2 style="color: gray; width:500px">Where: Cannes, France</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Gillard <a href="http://www.sbs.com.au/news/article/2011/11/04/gillards-charm-offensive-g20" target="_blank">received a warm welcome</a> from Obama while the two were attending the G20 Summit in Cannes. 
+            <time>3-4 November 2011</time>
+            <h2 style="color: gray;">Where: Cannes, France</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Gillard <a href="http://www.sbs.com.au/news/article/2011/11/04/gillards-charm-offensive-g20" target="_blank">received a warm welcome</a> from Obama while the two were attending the G20 Summit in Cannes. 
           </div>    
-      </li>
-       <li>
+        </li>
+        <li>
           <div>
-          <time>7 March 2011</time>
-          <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Obama <a href="https://obamawhitehouse.archives.gov/the-press-office/2011/02/23/statement-visit-australian-prime-minister-julia-gillard-white-house" target="_blank">welcomed</a> Gillard to the White House where they had a private meeting and a <a href="https://www.youtube.com/watch?v=F-rLz58T_Z0" target="_blank">press conference</a>. The Australian Prime Minister <a href="http://www.sbs.com.au/news/article/2011/03/10/transcript-julia-gillards-speech-congress" target="_blank">gave a speech</a> to a joint sitting of Congress marking the 60th anniversary of the ANZUS Treaty. Gillard also <a href="http://www.theaustralian.com.au/national-affairs/julia-gillard-gives-donation-to-vietnam-war-memorial-in-washington/news-story/5136a2b7a591b358e810cb1bbbc7f4a0" target="_blank">paid tribute</a> to Vietnam veterans at a war memorial, <a href="https://obamawhitehouse.archives.gov/photos-and-video/video/2011/03/07/president-obama-prime-minister-gillard-visit-wakefield-high-school" target="_blank">visited a high school</a> in Virginia, and <a href="http://www.dailytelegraph.com.au/julia-gillard-barack-obama-discuss-afghanistan-in-white-house-meeting/news-story/f0af97122eb1b733b93229701b5e217c" target="_blank">kicked an Australian football</a> in the Oval Office with the President.
-      <figure>
-       <img src="Obama_Gillard_07-03-2011.jpg" alt="President Obama and PM Gillard White House" style="margin-left:130%; margin-top:-80%; display:inline-block; height:400px;">
-       <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>19-20 November 2010</time>
-          <h2 style="color: gray; width:500px">Where: Lisbon, Portugal</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (NATO) </h2>
-      Gillard and Obama both attended the NATO Summit in Lisbon.
+            <time>7 March 2011</time>
+            <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Obama <a href="https://obamawhitehouse.archives.gov/the-press-office/2011/02/23/statement-visit-australian-prime-minister-julia-gillard-white-house" target="_blank">welcomed</a> Gillard to the White House where they had a private meeting and a <a href="https://www.youtube.com/watch?v=F-rLz58T_Z0" target="_blank">press conference</a>. The Australian Prime Minister <a href="http://www.sbs.com.au/news/article/2011/03/10/transcript-julia-gillards-speech-congress" target="_blank">gave a speech</a> to a joint sitting of Congress marking the 60th anniversary of the ANZUS Treaty. Gillard also <a href="http://www.theaustralian.com.au/national-affairs/julia-gillard-gives-donation-to-vietnam-war-memorial-in-washington/news-story/5136a2b7a591b358e810cb1bbbc7f4a0" target="_blank">paid tribute</a> to Vietnam veterans at a war memorial, <a href="https://obamawhitehouse.archives.gov/photos-and-video/video/2011/03/07/president-obama-prime-minister-gillard-visit-wakefield-high-school" target="_blank">visited a high school</a> in Virginia, and <a href="http://www.dailytelegraph.com.au/julia-gillard-barack-obama-discuss-afghanistan-in-white-house-meeting/news-story/f0af97122eb1b733b93229701b5e217c" target="_blank">kicked an Australian football</a> in the Oval Office with the President.
+            <figure>
+              <img src="Obama_Gillard_07-03-2011.jpg" alt="President Obama and PM Gillard White House">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>13 November 2010</time>
-          <h2 style="color: gray; width:500px">Where: Yokohama, Japan</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Gillard and Obama held their <a href="http://www.smh.com.au/national/gillard-meets-obama-20101113-17rov.html" target="_blank">first formal talks</a> while attending the 2010 APEC Summit in Japan. During the <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/trade-war-dominate-julia-gillard-and-barack-obamas-first-formal-meeting/news-story/3da29f435ea837d83958d8efec1a59fa" target="_blank">35-minute meeting</a>, the pair discussed the future strategy in Afghanistan, reaffirmed their commitment to the Copenhagen climate change agreement, and agreed that the United States should continue to deepen its engagement in the Asia-Pacific.
-      <figure>
-      <img src="Obama_Gillard_APEC.jpg" alt="President Obama and PM Gillard APEC Japan" style="margin-left:130%; margin-top:-80%; display:inline-block; height:400px;">
-      <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>19-20 November 2010</time>
+            <h2 style="color: gray;">Where: Lisbon, Portugal</h2>
+            <h2 style="color: navy;">Type: Informal (NATO) </h2>
+            Gillard and Obama both attended the NATO Summit in Lisbon.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>11-12 November 2010</time>
-          <h2 style="color: gray; width:500px">Where: Seoul, South Korea</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20)</h2>
-      Gillard <a href='http://pmtranscripts.pmc.gov.au/release/transcript-17472' target="_blank">noted</a> that she had a few brief discussions with Obama at the G20 Summit and said that the two countries are “great mates.”
+            <time>13 November 2010</time>
+            <h2 style="color: gray;">Where: Yokohama, Japan</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Gillard and Obama held their <a href="http://www.smh.com.au/national/gillard-meets-obama-20101113-17rov.html" target="_blank">first formal talks</a> while attending the 2010 APEC Summit in Japan. During the <a href="http://www.theaustralian.com.au/national-affairs/foreign-affairs/trade-war-dominate-julia-gillard-and-barack-obamas-first-formal-meeting/news-story/3da29f435ea837d83958d8efec1a59fa" target="_blank">35-minute meeting</a>, the pair discussed the future strategy in Afghanistan, reaffirmed their commitment to the Copenhagen climate change agreement, and agreed that the United States should continue to deepen its engagement in the Asia-Pacific.
+            <figure>
+              <img src="Obama_Gillard_APEC.jpg" alt="President Obama and PM Gillard APEC Japan">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <div class="block_1 hline-bottom">Julia Gillard led the Labor Party to victory in the federal election and was sworn in as Prime Minister on 14 September 2010</div> <br>
- 
-       <p style="margin:20px;">After the resignation of Kevin Rudd, Julia Gillard was elected leader of the Labor Party  and was sworn in as Prime Minister on 24 June 2010</p>
-     <hr/>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>18 December 2009</time>
-          <h2 style="color: gray; width:500px">Where: Copenhagen, Denmark</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (United Nations Climate Change Summit)</h2>
-          Both <a href="http://www.theaustralian.com.au/archive/news/rudds-address-to-the-un-conference/news-story/140ae8aa6d1132a0eb427242d330b701" target="_blank">Rudd</a> and <a href="https://www.theguardian.com/environment/2009/dec/18/obama-speech-copenhagen-climate-summit" target="_blank">Obama</a> attended the Climate Change Summit in Copenhagen. 
+            <time>11-12 November 2010</time>
+            <h2 style="color: gray;">Where: Seoul, South Korea</h2>
+            <h2 style="color: navy;">Type: Informal (G20)</h2>
+            Gillard <a href='http://pmtranscripts.pmc.gov.au/release/transcript-17472' target="_blank">noted</a> that she had a few brief discussions with Obama at the G20 Summit and said that the two countries are “great mates.”
           </div>    
-      </li>
-       <li>
+        </li>
+        <div class="block_1 hline-bottom">Julia Gillard led the Labor Party to victory in the federal election and was sworn in as Prime Minister on 14 September 2010</div> <br>
+
+        <p style="margin:20px;">After the resignation of Kevin Rudd, Julia Gillard was elected leader of the Labor Party  and was sworn in as Prime Minister on 24 June 2010</p>
+        <hr/>
+        <li>
           <div>
-          <time>30 November 2009</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Kevin Rudd met with Obama <a href="https://obamawhitehouse.archives.gov/the-press-office/visit-australian-prime-minister-rudd" target="_blank">in the Oval Office to discuss</a> Afghanistan, the global financial crisis, nuclear non-proliferation, and the upcoming Copenhagen conference. 
-      <figure>
-      <img src="obama-rudd-30.11.09.jpg" alt="President Obama and PM Rudd White House" style="margin-left:-160%; margin-top:-150%; display:inline-block; height:300px;">
-            <figcaption style="margin-left:-160%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
-      </li>
-     <li>
-          <div>
-          <time>15 November 2009</time>
-          <h2 style="color: gray; width:500px">Where: Singapore</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Rudd <a href="http://www.abc.net.au/news/2009-11-15/obama-watches-on-as-kevin-rudd-speaks-at-apec/1141328" target="_blank">sat next to</a> Obama at the APEC Summit in Singapore.
-      </div>    
-      </li>
-     <li>
-          <div>
-          <time>24-25 September 2009</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Pittsburgh, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Rudd and Obama <a href='http://www.abc.net.au/news/2010-01-12/28442' target="_blank">met informally</a> at the G20 conference.
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>23 July 2009</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: New York City, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Both <a href="http://www.un.org/ga/64/generaldebate/AU.shtml" target="_blank">Rudd</a> and <a href="http://www.un.org/ga/64/generaldebate/US.shtml" target="_blank">Obama</a> gave speeches at the United Nations General Assembly, emphasising the need to use the G20 as a leading force to counteract the global economic collapse.
-      </div>    
-      </li>
-    <li>
-          <div>
-          <time>10 July 2009</time>
-          <h2 style="color: gray; width:500px">Where: L'Aquila, Italy</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (Major Economics Forum) </h2>
-      Rudd and Obama <a href='http://www.smh.com.au/environment/pm-rudd-shares-centre-stage-with-us-president-obama-20090709-dezn.html' target="_blank">attended the launch</a> of the Major Economies Forum in Italy where they <a href='http://www.abc.net.au/news/2009-07-10/rudd-takes-centre-stage-in-climate-talks/1347928' target="_blank">announced a global partnership</a> to combat climate change.
-     <!--  <img src="Obama_Rudd_Laquila.jpg" alt="President Obama and PM Rudd L'Aquila" style="margin-left:-180%;"> -->  
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>2 April 2009</time>
-          <h2 style="color: gray; width:500px">Where: London, United Kingdom</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Rudd attended the G20 Summit with Obama, for whom it was the first overseas trip as president.
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>24 March 2009</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Rudd had a <a href="http://www.smh.com.au/world/rudd-and-obama-in-meeting-of-the-minds-20090324-9987.html" target="_blank">70-minute meeting</a> with Obama in their first face-to-face at the Oval Office, which Obama described as <a href="http://www.smh.com.au/national/obama-lauds-rudd-in-meeting-of-the-minds-20090325-9aip.html" target="_blank">“a great meeting of the minds”</a>. The global economic crisis dominated the consultation, with other major issues including Afghanistan, climate change, and nuclear non-proliferation also high on the agenda. Rudd arrived in Washington just two months after Obama’s inauguration – he was <a href="http://www.abc.net.au/news/2009-03-25/prime-minister-kevin-rudd-and-us-president-barack/880094" target="_blank">one of the first foreign leaders</a> to meet the new president.
-      </div>    
-      </li>
-      <p style="margin-left:20px;"> President Obama was inaugurated on 20 January 2013</p>
-      <hr/> 
-      <li>
-          <div>
-          <time>20-21 November 2008</time>
-          <h2 style="color: gray; width:500px">Where: Lima, Peru</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Rudd and Bush attended the CEO Summit at APEC. 
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>14-15 November 2008</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: White House Dinner, Washington DC, United States</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (G20) </h2>
-      Rudd flew to Washington amid tensions <a href="http://www.smh.com.au/federal-politics/political-opinion/there-was-little-love-between-pm-from-queensland-and-president-from-texas-20101208-18pwq.html" target="_blank">following a media report </a>that Bush had asked a “stunned” Rudd “what’s the G20?” during a phone call in October. While Rudd <a href="http://www.abc.net.au/pm/content/2008/s2409094.htm" target="_blank">denied</a> that Bush had made the comments, relations <a href="http://www.smh.com.au/news/world/sheepish-rudd-gets-cool-reception-in-washington/2008/11/15/1226318996311.html" target="_blank">were tense</a> at the White House prior to the G20 Summit in Washington.    
-    </div>    
-      </li>
-      <li>
-          <div>
-          <time>3 April 2008</time>
-          <h2 style="color: gray; width:500px">Where: Bucharest, Romania</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (NATO) </h2>
-      Rudd caused a domestic stir after <a href="http://www.smh.com.au/articles/2008/04/04/1207249418044.html" target="_blank">saluting</a> Bush when the pair met informally at the NATO Summit.
+            <time>18 December 2009</time>
+            <h2 style="color: gray;">Where: Copenhagen, Denmark</h2>
+            <h2 style="color: navy;">Type: Informal (United Nations Climate Change Summit)</h2>
+            Both <a href="http://www.theaustralian.com.au/archive/news/rudds-address-to-the-un-conference/news-story/140ae8aa6d1132a0eb427242d330b701" target="_blank">Rudd</a> and <a href="https://www.theguardian.com/environment/2009/dec/18/obama-speech-copenhagen-climate-summit" target="_blank">Obama</a> attended the Climate Change Summit in Copenhagen. 
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>28 March 2008</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Rudd’s first face-to-face <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2008/03/20080304.html" target="_blank">meeting</a> with Bush took place in the Oval Office. Rudd <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2008/03/20080328-3.html" target="_blank">declared</a> that Australia would be “in Afghanistan for the long haul” and confirmed a $165 million assistance package to Iraq. Iran and climate change were also on the agenda.
-      <figure>
-      <img src="Bush_Rudd_28_03_08.jpg" alt="President Bush and PM Rudd 08" style="margin-left:-180%; margin-top:-80%; display:inline-block; height:350px;">
-            <figcaption style="margin-left:-180%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
-      </li>
-      <p style="margin:20px;">Kevin Rudd led the Labor Party to victory in the federal election and was sworn in as Prime Minister on 3 December 2007</p>
-     <hr/>
-       <li>
-          <div>
-          <time>5 September 2007</time>
-          <h2 style="color: rgb(12, 133, 71); width:500px">Where: Sydney, Australia</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/20070905.html" target="_blank">spent four days</a> in Sydney in September 2007 for the APEC Summit. Howard hosted Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070904-10_d-0456-2-515h.html" target="_blank">on a boat tour</a> around Sydney Harbour and the pair had a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070904-10_d-0782-2-515h.html" target="_blank">luncheon</a> at the Royal Australia Navy Heritage Centre days before the summit began. They <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070905_d-0169-1-515h.html" target="_blank">signed</a> a Defense Cooperation Treaty at the Commonwealth Parliament Offices before attending the APEC summit later in the week. The pair also held <a href="https://www.reuters.com/article/us-apec-security/china-india-focus-of-u-s-japan-australia-talks-idUST33111220070908" target="_blank">trilateral</a> talks with Japan’s Shinzo Abe.
-      <figure>
-      <img src="Bush_Howard_harbor.jpg" alt="President Bush and PM Howard on Sydney harbor" style="margin-left:130%; margin-top:-250%; display:inline-block; height:400px;">
-            <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>30 November 2009</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Kevin Rudd met with Obama <a href="https://obamawhitehouse.archives.gov/the-press-office/visit-australian-prime-minister-rudd" target="_blank">in the Oval Office to discuss</a> Afghanistan, the global financial crisis, nuclear non-proliferation, and the upcoming Copenhagen conference. 
+            <figure>
+              <img src="obama-rudd-30.11.09.jpg" alt="President Obama and PM Rudd White House">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>17-20 November 2006</time>
-          <h2 style="color: gray; width:500px">Where: Hanoi, Vietnam</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Howard was joined by Foreign Minister Alexander Downer as he <a href="https://2001-2009.state.gov/p/eap/rls/rm/76320.htm" target="_blank">met with</a> Bush and Secretary of State Condoleezza Rice on the sidelines of APEC. They discussed Iraq, climate change, and the chances of reviving the Doha Round in the World Trade Organization. Howard and Bush also <a href="http://www.nytimes.com/2006/11/18/world/18diplo.html" target="_blank">met informally</a> during the summit.
+            <time>15 November 2009</time>
+            <h2 style="color: gray;">Where: Singapore</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Rudd <a href="http://www.abc.net.au/news/2009-11-15/obama-watches-on-as-kevin-rudd-speaks-at-apec/1141328" target="_blank">sat next to</a> Obama at the APEC Summit in Singapore.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>16 May 2006</time>
-          <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Bush <a href="http://www.nytimes.com/2006/11/18/world/18diplo.html" target="_blank">welcomed</a> Howard to the White House where the leaders reaffirmed their commitment to the ANZUS alliance, with counter-terrorism high on the agenda. Following a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516-1.html" target="_blank">joint press conference</a>, the leaders <a href='https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516-13.html' target="_blank">exchanged toasts</a> in the State Dining Room. Janette Howard travelled with Prime Minister Howard and was <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516.html" target="_blank">welcomed</a> by First Lady Laura Bush on the South Lawn.
-      <figure>
-      <img src="Bush_Howard_16-05-06.jpg" alt="President Bush and Howard Toast 2006" style="margin-left:130%; margin-top:-80%; display:inline-block; height:400px;">
-            <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>14 May 2006</time>
-          <h2 style="color: rgb(255,195,0); width:400px">Where: Australian Ambassador's Residence, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Bush presented trees from the White House to Howard at the Australian Embassy in Washington. Howard <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060514.html" target="_blank">considered</a> them a “wonderful symbol of friendship”.
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>18-19 November 2005</time>
-          <h2 style="color: gray; width:500px">Where: Busan, South Korea</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Howard and Bush both attended the APEC summit in South Korea but only had time for a brief informal meeting and <a href="http://cdn.newsapi.com.au/image/v1/bf21dcf960d89a7dd9a933764fe185e5?width=650" target="_blank">photo</a>.
-      <figure>
-      <img src="http://cdn.newsapi.com.au/image/v1/bf21dcf960d89a7dd9a933764fe185e5?width=650" alt="President Bush and Howard SK" style="margin-left:130%; margin-top:-60%; display:inline-block; height:300px;">
-            <figcaption style="margin-left:130%; margin-right:-50%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>24-25 September 2009</time>
+            <h2 style="color: rgb(255,195,0);">Where: Pittsburgh, United States</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Rudd and Obama <a href='http://www.abc.net.au/news/2010-01-12/28442' target="_blank">met informally</a> at the G20 conference.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>19 July 2005</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      George and Laura Bush hosted John and Janette Howard at the White House for <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2005/07/20050719.html" target="_blank">“a true family lunch”</a>. The leaders had an Oval Office meeting and discussed Iraq and Afghanistan as well as their shared commitment to freedom and democracy.
-      </div>    
-      </li>
-       <div class="block_1 hline-bottom">President Bush was inaugurated President for the second time on 20 January 2005</div>
-       <br>
-      <li>
-          <div>
-          <time>19-22 November 2004</time>
-          <h2 style="color: gray; width:500px">Where: Santiago, Chile</h2>
-          <h2 style="color: red; width:500px">Type: Sideline meeting (APEC) </h2>
-      Howard <a href="http://pmtranscripts.pmc.gov.au/release/transcript-21517" target="_blank">met with Bush</a> on the sidelines of APEC in Santiago. They <a href="http://www.abc.net.au/am/content/2004/s1248423.htm" target="_blank">discussed</a> the US-Australia Free Trade Agreement, North Korea, and China’s regional role.
+            <time>23 July 2009</time>
+            <h2 style="color: rgb(255,195,0);">Where: New York City, United States</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Both <a href="http://www.un.org/ga/64/generaldebate/AU.shtml" target="_blank">Rudd</a> and <a href="http://www.un.org/ga/64/generaldebate/US.shtml" target="_blank">Obama</a> gave speeches at the United Nations General Assembly, emphasising the need to use the G20 as a leading force to counteract the global economic collapse.
           </div>    
-      </li>
-      <div class="block_1 hline-bottom">The Howard Government was re-elected on 22 October 2004</div>
-      <br>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>2-4 June 2004</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2004/06/20040603-3.html" target="_blank">welcomed</a> Howard to the White House for an Oval Office meeting. They discussed the coalition’s progress in Iraq and the deepening of bilateral economic relations between Australia and the United States.
-      </div>    
-      </li>
-      <li>
-          <div>
-          <time>22 October 2003</time>
-          <h2 style="color: rgb(12, 133, 71); width:400px">Where: Parliament House, Canberra, Australia</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (Australia) </h2>
-      Bush <a href="https://2001-2009.state.gov/p/eap/rls/rm/2003/25591.htm" target="_blank">addressed</a> Australia’s Parliament while protestors chanted on its lawns in Canberra. Senators Bob Brown and Kerry Nettle were <a href="http://www.smh.com.au/articles/2003/10/23/1066631537404.html" target="_blank">ordered out</a> of the House chamber for protesting, as Bush praised Australia’s war efforts and <a href="http://www.smh.com.au/articles/2003/10/23/1066631537404.html" target="_blank">reassured</a> Senators that the two Australian prisoners in Guantanamo Bay would be “dealt with fairly.” During his 21-hour visit, Bush held private talks with Prime Minister Howard and opposition leader Simon Crean.
-      <figure>
-      <img src="Bush_Howard_ParliamentHouse.jpg" alt="President Bush and Howard Australian Parliament 2003" style="margin-left:130%; margin-top:-200%; display:inline-block; height:400px;">
-            <figcaption style="margin-left:130%; margin-right:-50%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>10 July 2009</time>
+            <h2 style="color: gray;">Where: L'Aquila, Italy</h2>
+            <h2 style="color: navy;">Type: Informal (Major Economics Forum) </h2>
+            Rudd and Obama <a href='http://www.smh.com.au/environment/pm-rudd-shares-centre-stage-with-us-president-obama-20090709-dezn.html' target="_blank">attended the launch</a> of the Major Economies Forum in Italy where they <a href='http://www.abc.net.au/news/2009-07-10/rudd-takes-centre-stage-in-climate-talks/1347928' target="_blank">announced a global partnership</a> to combat climate change.
+            <!--  <img src="Obama_Rudd_Laquila.jpg" alt="President Obama and PM Rudd L'Aquila" style="margin-left:-180%;"> -->  
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>18-21 October 2003</time>
-          <h2 style="color: gray; width:500px">Where: Bangkok, Thailand</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Howard and Bush attended the APEC meeting in Bangkok.
-      <figure>
-      <img src="Bush_Howard_APEC_03.jpg" alt="President Bush and Howard APEC 2003" style="margin-left:-160%; margin-top:-250%; display:inline-block; height:300px;">
-            <figcaption style="margin-left:-160%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
+            <time>2 April 2009</time>
+            <h2 style="color: gray;">Where: London, United Kingdom</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Rudd attended the G20 Summit with Obama, for whom it was the first overseas trip as president.
           </div>    
-      </li>
-      <li>
+        </li>
+        <li>
           <div>
-          <time>2-3 May 2003</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Crawford, Texas, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Bush and First Lady Laura <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/05/20030503-1.html" target="_blank">invited</a> John and Janette Howard to their ranch in Crawford, Texas for an overnight visit. Operation Iraqi Freedom was the main item on the agenda, with the leaders also discussing the Bali bombings and developments on the Korean Peninsula. The setting was informal and Bush took Howard <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/05/20030503-1.html" target="_blank">“for a good walk”</a> around the ranch. The president famously labelled his Australian counterpart a <a href="http://www.smh.com.au/articles/2003/05/04/1051987592763.html" target="_blank">“man of steel”</a>.
-      <figure>
-       <img src="Bush_Howard_Texas.jpg" alt="President Bush and Howard Texas 2003" style="margin-left:130%; margin-top:-250%; display:inline-block; height:350px;">
-             <figcaption style="margin-left:130%; margin-right:-100%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
-      </li>
-      <li>
+            <time>24 March 2009</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Rudd had a <a href="http://www.smh.com.au/world/rudd-and-obama-in-meeting-of-the-minds-20090324-9987.html" target="_blank">70-minute meeting</a> with Obama in their first face-to-face at the Oval Office, which Obama described as <a href="http://www.smh.com.au/national/obama-lauds-rudd-in-meeting-of-the-minds-20090325-9aip.html" target="_blank">“a great meeting of the minds”</a>. The global economic crisis dominated the consultation, with other major issues including Afghanistan, climate change, and nuclear non-proliferation also high on the agenda. Rudd arrived in Washington just two months after Obama’s inauguration – he was <a href="http://www.abc.net.au/news/2009-03-25/prime-minister-kevin-rudd-and-us-president-barack/880094" target="_blank">one of the first foreign leaders</a> to meet the new president.
+          </div>    
+        </li>
+        <p style="margin-left:20px;"> President Obama was inaugurated on 20 January 2013</p>
+        <hr/> 
+        <li>
           <div>
-          <time>10 February 2003</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      After <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/02/images/20030210-10_howard-p26671-03a-515h.html" target="_blank">meeting privately</a>, Bush and Howard held a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/02/20030210-10.html" target="_blank">joint press conference</a> in which they discussed the disarmament of Iraq.
-      </div>    
-      </li>
-      <li>
+            <time>20-21 November 2008</time>
+            <h2 style="color: gray;">Where: Lima, Peru</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Rudd and Bush attended the CEO Summit at APEC. 
+          </div>    
+        </li>
+        <li>
           <div>
-          <time>26-27 October 2002</time>
-          <h2 style="color: gray; width:500px">Where: Los Cabos, Mexico</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Howard <a href="http://pmtranscripts.pmc.gov.au/release/transcript-12645">had a brief discussion</a> with Bush where the leaders discussed Iraq and the Security Council.
-      </div>    
-      </li>
-      <li>
+            <time>14-15 November 2008</time>
+            <h2 style="color: rgb(255,195,0);">Where: White House Dinner, Washington DC, United States</h2>
+            <h2 style="color: navy;">Type: Informal (G20) </h2>
+            Rudd flew to Washington amid tensions <a href="http://www.smh.com.au/federal-politics/political-opinion/there-was-little-love-between-pm-from-queensland-and-president-from-texas-20101208-18pwq.html" target="_blank">following a media report </a>that Bush had asked a “stunned” Rudd “what’s the G20?” during a phone call in October. While Rudd <a href="http://www.abc.net.au/pm/content/2008/s2409094.htm" target="_blank">denied</a> that Bush had made the comments, relations <a href="http://www.smh.com.au/news/world/sheepish-rudd-gets-cool-reception-in-washington/2008/11/15/1226318996311.html" target="_blank">were tense</a> at the White House prior to the G20 Summit in Washington.    
+          </div>    
+        </li>
+        <li>
           <div>
-          <time>13 June 2002</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      On his second trip to Washington in the Bush era, Howard <a href="http://australianpolitics.com/2002/06/12/howard-addresses-us-congress.html" target="_blank">addressed</a> a Joint Sitting of Congress before meeting with the President the following day. The <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2002/06/20020613-8.html" target="_blank">joint press release</a> describes their discussions, which focussed on Iraq as well as the importance of bilateral trade.
-      </div>    
-      </li>
-     <div class="block_1 hline-bottom">The Howard Government was re-elected on 26 November 2001</div> <br>
-     <li>
-      <div>
-          <time>20-21 October 2001</time>
-          <h2 style="color: gray; width:500px">Where: Shanghai, China</h2>
-          <h2 style="color: navy; width:500px">Type: Informal (APEC) </h2>
-      Howard and Bush were both at APEC in China, and managed time for a <a href="http://consumer.fairfaxsyndication.com/archive/George-W.-Bush-and-John-howard-Looking-for-allies-in-globalisationDIGICAM-APEC-Fairfax.APEC.NEWS.Shanghai.-2ITHRGY99OOR.html" target="_blank">joke and a photo</a>.
-      </div>    
-      </li>
-       <li>
+            <time>3 April 2008</time>
+            <h2 style="color: gray;">Where: Bucharest, Romania</h2>
+            <h2 style="color: navy;">Type: Informal (NATO) </h2>
+            Rudd caused a domestic stir after <a href="http://www.smh.com.au/articles/2008/04/04/1207249418044.html" target="_blank">saluting</a> Bush when the pair met informally at the NATO Summit.
+          </div>    
+        </li>
+        <li>
           <div>
-          <time>10 September 2001</time>
-          <h2 style="color: rgb(255,195,0); width:500px">Where: Oval Office, Washington DC, United States</h2>
-          <h2 style="color: black; width:500px">Type: Official bilateral (United States) </h2>
-      Two days prior to the September 11 attacks, Howard hosted a barbecue at the Australian Ambassador’s residence for Bush and several of his Cabinet members, including Vice President Dick Cheney, Secretary of State Colin Powell, and two Supreme Court Justices. The next day, the two leaders <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2001/09/20010910-1.html" target="_blank">commemorated the 50th anniversary</a> of the US-Australia alliance at the Washington Navy Yard before heading to the Oval Office for their first official meeting. Following the terrorist attacks, Howard attended a sitting in Congress before <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2001/09/20010914-12.html" target="_blank">invoking Article IV</a> of the ANZUS Treaty on September 14, committing Australia to America’s defence.
-      <figure>
-      <img src="Bush_Howard_10-11-2001.jpg" alt="President Bush and Howard 2001" style="margin-left:-150%; margin-top:-250%; display:inline-block; height:300px;">
-            <figcaption style="margin-left:-150%;"><font size="1" color="gray">Getty Images</font></figcaption>
-        </figure>
-      </div>    
+            <time>28 March 2008</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Rudd’s first face-to-face <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2008/03/20080304.html" target="_blank">meeting</a> with Bush took place in the Oval Office. Rudd <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2008/03/20080328-3.html" target="_blank">declared</a> that Australia would be “in Afghanistan for the long haul” and confirmed a $165 million assistance package to Iraq. Iran and climate change were also on the agenda.
+            <figure>
+              <img src="Bush_Rudd_28_03_08.jpg" alt="President Bush and PM Rudd 08">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <p style="margin:20px;">Kevin Rudd led the Labor Party to victory in the federal election and was sworn in as Prime Minister on 3 December 2007</p>
+        <hr/>
+        <li>
+          <div>
+            <time>5 September 2007</time>
+            <h2 style="color: rgb(12, 133, 71);">Where: Sydney, Australia</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/20070905.html" target="_blank">spent four days</a> in Sydney in September 2007 for the APEC Summit. Howard hosted Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070904-10_d-0456-2-515h.html" target="_blank">on a boat tour</a> around Sydney Harbour and the pair had a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070904-10_d-0782-2-515h.html" target="_blank">luncheon</a> at the Royal Australia Navy Heritage Centre days before the summit began. They <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2007/09/images/20070905_d-0169-1-515h.html" target="_blank">signed</a> a Defense Cooperation Treaty at the Commonwealth Parliament Offices before attending the APEC summit later in the week. The pair also held <a href="https://www.reuters.com/article/us-apec-security/china-india-focus-of-u-s-japan-australia-talks-idUST33111220070908" target="_blank">trilateral</a> talks with Japan’s Shinzo Abe.
+            <figure>
+              <img src="Bush_Howard_harbor.jpg" alt="President Bush and PM Howard on Sydney harbor">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>17-20 November 2006</time>
+            <h2 style="color: gray;">Where: Hanoi, Vietnam</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Howard was joined by Foreign Minister Alexander Downer as he <a href="https://2001-2009.state.gov/p/eap/rls/rm/76320.htm" target="_blank">met with</a> Bush and Secretary of State Condoleezza Rice on the sidelines of APEC. They discussed Iraq, climate change, and the chances of reviving the Doha Round in the World Trade Organization. Howard and Bush also <a href="http://www.nytimes.com/2006/11/18/world/18diplo.html" target="_blank">met informally</a> during the summit.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>16 May 2006</time>
+            <h2 style="color: rgb(255,195,0); width:400px">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Bush <a href="http://www.nytimes.com/2006/11/18/world/18diplo.html" target="_blank">welcomed</a> Howard to the White House where the leaders reaffirmed their commitment to the ANZUS alliance, with counter-terrorism high on the agenda. Following a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516-1.html" target="_blank">joint press conference</a>, the leaders <a href='https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516-13.html' target="_blank">exchanged toasts</a> in the State Dining Room. Janette Howard travelled with Prime Minister Howard and was <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060516.html" target="_blank">welcomed</a> by First Lady Laura Bush on the South Lawn.
+            <figure>
+              <img src="Bush_Howard_16-05-06.jpg" alt="President Bush and Howard Toast 2006">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>14 May 2006</time>
+            <h2 style="color: rgb(255,195,0); width:400px">Where: Australian Ambassador's Residence, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Bush presented trees from the White House to Howard at the Australian Embassy in Washington. Howard <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2006/05/20060514.html" target="_blank">considered</a> them a “wonderful symbol of friendship”.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>18-19 November 2005</time>
+            <h2 style="color: gray;">Where: Busan, South Korea</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Howard and Bush both attended the APEC summit in South Korea but only had time for a brief informal meeting and <a href="http://cdn.newsapi.com.au/image/v1/bf21dcf960d89a7dd9a933764fe185e5?width=650" target="_blank">photo</a>.
+            <figure>
+              <img src="http://cdn.newsapi.com.au/image/v1/bf21dcf960d89a7dd9a933764fe185e5?width=650" alt="President Bush and Howard SK">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>19 July 2005</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            George and Laura Bush hosted John and Janette Howard at the White House for <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2005/07/20050719.html" target="_blank">“a true family lunch”</a>. The leaders had an Oval Office meeting and discussed Iraq and Afghanistan as well as their shared commitment to freedom and democracy.
+          </div>    
+        </li>
+        <div class="block_1 hline-bottom">President Bush was inaugurated President for the second time on 20 January 2005</div>
+        <br>
+        <li>
+          <div>
+            <time>19-22 November 2004</time>
+            <h2 style="color: gray;">Where: Santiago, Chile</h2>
+            <h2 style="color: red;">Type: Sideline meeting (APEC) </h2>
+            Howard <a href="http://pmtranscripts.pmc.gov.au/release/transcript-21517" target="_blank">met with Bush</a> on the sidelines of APEC in Santiago. They <a href="http://www.abc.net.au/am/content/2004/s1248423.htm" target="_blank">discussed</a> the US-Australia Free Trade Agreement, North Korea, and China’s regional role.
+          </div>    
+        </li>
+        <div class="block_1 hline-bottom">The Howard Government was re-elected on 22 October 2004</div>
+        <br>
+        <li>
+          <div>
+            <time>2-4 June 2004</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Bush <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2004/06/20040603-3.html" target="_blank">welcomed</a> Howard to the White House for an Oval Office meeting. They discussed the coalition’s progress in Iraq and the deepening of bilateral economic relations between Australia and the United States.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>22 October 2003</time>
+            <h2 style="color: rgb(12, 133, 71); width:400px">Where: Parliament House, Canberra, Australia</h2>
+            <h2 style="color: black;">Type: Official bilateral (Australia) </h2>
+            Bush <a href="https://2001-2009.state.gov/p/eap/rls/rm/2003/25591.htm" target="_blank">addressed</a> Australia’s Parliament while protestors chanted on its lawns in Canberra. Senators Bob Brown and Kerry Nettle were <a href="http://www.smh.com.au/articles/2003/10/23/1066631537404.html" target="_blank">ordered out</a> of the House chamber for protesting, as Bush praised Australia’s war efforts and <a href="http://www.smh.com.au/articles/2003/10/23/1066631537404.html" target="_blank">reassured</a> Senators that the two Australian prisoners in Guantanamo Bay would be “dealt with fairly.” During his 21-hour visit, Bush held private talks with Prime Minister Howard and opposition leader Simon Crean.
+            <figure>
+              <img src="Bush_Howard_ParliamentHouse.jpg" alt="President Bush and Howard Australian Parliament 2003">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>18-21 October 2003</time>
+            <h2 style="color: gray;">Where: Bangkok, Thailand</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Howard and Bush attended the APEC meeting in Bangkok.
+            <figure>
+              <img src="Bush_Howard_APEC_03.jpg" alt="President Bush and Howard APEC 2003">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>2-3 May 2003</time>
+            <h2 style="color: rgb(255,195,0);">Where: Crawford, Texas, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Bush and First Lady Laura <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/05/20030503-1.html" target="_blank">invited</a> John and Janette Howard to their ranch in Crawford, Texas for an overnight visit. Operation Iraqi Freedom was the main item on the agenda, with the leaders also discussing the Bali bombings and developments on the Korean Peninsula. The setting was informal and Bush took Howard <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/05/20030503-1.html" target="_blank">“for a good walk”</a> around the ranch. The president famously labelled his Australian counterpart a <a href="http://www.smh.com.au/articles/2003/05/04/1051987592763.html" target="_blank">“man of steel”</a>.
+            <figure>
+              <img src="Bush_Howard_Texas.jpg" alt="President Bush and Howard Texas 2003">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+            </figure>
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>10 February 2003</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            After <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/02/images/20030210-10_howard-p26671-03a-515h.html" target="_blank">meeting privately</a>, Bush and Howard held a <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2003/02/20030210-10.html" target="_blank">joint press conference</a> in which they discussed the disarmament of Iraq.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>26-27 October 2002</time>
+            <h2 style="color: gray;">Where: Los Cabos, Mexico</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Howard <a href="http://pmtranscripts.pmc.gov.au/release/transcript-12645">had a brief discussion</a> with Bush where the leaders discussed Iraq and the Security Council.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>13 June 2002</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            On his second trip to Washington in the Bush era, Howard <a href="http://australianpolitics.com/2002/06/12/howard-addresses-us-congress.html" target="_blank">addressed</a> a Joint Sitting of Congress before meeting with the President the following day. The <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2002/06/20020613-8.html" target="_blank">joint press release</a> describes their discussions, which focussed on Iraq as well as the importance of bilateral trade.
+          </div>    
+        </li>
+        <div class="block_1 hline-bottom">The Howard Government was re-elected on 26 November 2001</div> <br>
+        <li>
+          <div>
+            <time>20-21 October 2001</time>
+            <h2 style="color: gray;">Where: Shanghai, China</h2>
+            <h2 style="color: navy;">Type: Informal (APEC) </h2>
+            Howard and Bush were both at APEC in China, and managed time for a <a href="http://consumer.fairfaxsyndication.com/archive/George-W.-Bush-and-John-howard-Looking-for-allies-in-globalisationDIGICAM-APEC-Fairfax.APEC.NEWS.Shanghai.-2ITHRGY99OOR.html" target="_blank">joke and a photo</a>.
+          </div>    
+        </li>
+        <li>
+          <div>
+            <time>10 September 2001</time>
+            <h2 style="color: rgb(255,195,0);">Where: Oval Office, Washington DC, United States</h2>
+            <h2 style="color: black;">Type: Official bilateral (United States) </h2>
+            Two days prior to the September 11 attacks, Howard hosted a barbecue at the Australian Ambassador’s residence for Bush and several of his Cabinet members, including Vice President Dick Cheney, Secretary of State Colin Powell, and two Supreme Court Justices. The next day, the two leaders <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2001/09/20010910-1.html" target="_blank">commemorated the 50th anniversary</a> of the US-Australia alliance at the Washington Navy Yard before heading to the Oval Office for their first official meeting. Following the terrorist attacks, Howard attended a sitting in Congress before <a href="https://georgewbush-whitehouse.archives.gov/news/releases/2001/09/20010914-12.html" target="_blank">invoking Article IV</a> of the ANZUS Treaty on September 14, committing Australia to America’s defence.
+          <!--  <figure>
+            <img src="Bush_Howard_10-11-2001.jpg" alt="President Bush and Howard 2001">
+              <figcaption><font size="1" color="gray">Getty Images</font></figcaption>
+          </figure> -->
+        </div>    
       </li>
     </ul>
   </section>
 
 
-   <script type="text/javascript">
+<script type="text/javascript">
   (function() {
     'use strict';
     // define variables
@@ -839,7 +818,7 @@ hr {
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
+        );
     }
     function callbackFunc() {
       for (var i = 0; i < items.length; i++) {
@@ -862,15 +841,15 @@ hr {
       li = ul.getElementsByTagName('li');
       // Loop through all list items, and hide those who don't match the search query
       for (i = 0; i < li.length; i++) {
-          a = li[i].getElementsByTagName("a")[0];
-          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              li[i].style.display = "";
-          } else {
-              li[i].style.display = "none";
-          }
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
       }
-  };
-   </script>
-  </body>
+    };
+  </script>
+</body>
 
-  </html>
+</html>
