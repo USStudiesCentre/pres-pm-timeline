@@ -133,7 +133,7 @@ hr{
   border-bottom: 4px dashed #000; 
 }
 .timeline ul li::after{
-  transition: background .5s ease-in-out;
+  transition: background 1s ease-in-out;
 }
 .timeline ul li.in-view::after{
   background: rgba(0,157,227,1);
@@ -142,8 +142,9 @@ hr{
   visibility: hidden;
   z-index: 1;
  /* visibility: visible;*/
-  opacity: 0;
-  transition: all .5s ease-in-out;
+  /*opacity: 1;*/
+   transition: background 1s ease-in-out;
+/*  transition: all .5s ease-in-out;*/
 }
 .timeline ul li:nth-child(odd) div{
   transform: translate3d(200px, 0, 0);
@@ -928,8 +929,8 @@ input[type=text]{
     function isElementInViewport(el) {
       var rect = el.getBoundingClientRect();
       return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
+        rect.top >= -1000 &&
+        rect.left >= -10 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
@@ -942,7 +943,7 @@ input[type=text]{
       }
     }
     // listen for events
-    window.addEventListener("load", callbackFunc);
+   // window.addEventListener("load", callbackFunc);
     window.addEventListener("resize", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
   })();
