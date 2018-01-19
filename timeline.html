@@ -2,6 +2,8 @@
 <html lang="eng-au">
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--   <script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script> -->
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>US Presidential - Australian Prime Ministerial Interactions 2001-2017</title>
 </head>
@@ -14,7 +16,8 @@
   box-sizing: border-box;
 }
 body{
-  font: normal 15px 'Univers LT Pro', sans-serif;
+  font: normal 1rem 'Univers LT Pro', sans-serif;
+  /*font-size: ;*/
   color: black;
   resize:width;
   overflow-x: hidden;
@@ -33,6 +36,11 @@ h1{
   font-size: 100%;
   text-align:center;
   font: 'Neo Sans Pro', sans-serif;
+}
+.searchbox{
+  padding-bottom:50px;
+  width:100%;
+  height:100px;
 }
 .timeline ul{
   background: none;
@@ -62,7 +70,7 @@ h1{
 .timeline ul li div{
   position: relative;
   bottom: 0;
-  height:80%;
+  height:60%;
   width: 400px;
   padding: 10px;
   background: white;
@@ -108,11 +116,13 @@ hr{
   height: 2px;
   border: 0;
   border-top: 10px  double black;
+  /*margin-left:20px;*/
 /*  margin: 1em 0;*/
-  padding: 0;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 .hline-bottom{
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-left:20px;
   border-bottom: 4px dashed #000; 
 }
@@ -124,6 +134,7 @@ hr{
 }
 .timeline ul li div{
   visibility: hidden;
+ /* visibility: visible;*/
   opacity: 0;
   transition: all .5s ease-in-out;
 }
@@ -181,24 +192,26 @@ line{
     stroke-dashoffset:0;
   }
 }
+mark {
+  background: orange;
+  color: black;
+}
 input[type=text]{
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+        padding:17px;padding-left:55px;width:200px;border:3px solid #f5f5f5;
+        font-size:13px;color:gray;
+        background-color: none;
+        /*padding-bottom:100px;*/
+        margin-left:20px;
+        background-image:url('http://i47.tinypic.com/r02vbq.png');
+        background-repeat:no-repeat;
+        background-position:left center;outline:2;
+        position:fixed;
 }
 
-input[type=text]:focus{
+/*input[type=text]:focus{
     width: 100%;
-}
+    position:fixed;
+}*/
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -231,11 +244,12 @@ input[type=text]:focus{
   }
   img{
     max-width:100%;
+    max-height:30%;
   }
   h2{
     max-width:100%;
+    max-height:30%;
   }
-
 }
 </style>
 <body>
@@ -303,8 +317,9 @@ input[type=text]:focus{
     </h5>
 </div>
 -->
-
-
+<div class="searchbox">
+  <input type="text" id="search" placeholder="Search...">
+</div>
 
   <section class="timeline">
     <ul>
@@ -925,7 +940,53 @@ input[type=text]:focus{
   })();
 
 
+  
+    var $find = $('.timeline li');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    
+    $find.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+$('#search').keyup(function() {
+
+    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+        reg = RegExp(val, 'i'),
+        text;
+
+    $find.show().filter(function() {
+        text = $(this).text().replace(/\s+/g, ' ');
+        return !reg.test(text);
+    }).hide();
+});
+
+    $('#search').bind('keyup change', function(ev) {
+        // pull in the new value
+        var searchTerm = $(this).val();
+
+        // remove any old highlighted terms
+        $('body').removeHighlight();
+
+        // disable highlighting if empty
+        if ( searchTerm ) {
+            // highlight the new term
+            $('body').highlight( searchTerm );
+        }
+    });
+
+//     $(function() {
+//   $("input").on("input.highlight", function() {
+//     // Determine specified search term
+//     var searchTerm = $(this).val();
+//     // Highlight search term inside a specific context
+//     $("#context").unmark().mark(searchTerm);
+//   }).trigger("input.highlight").focus();
+// });
+
   </script>
+
 </body>
 
 </html>
