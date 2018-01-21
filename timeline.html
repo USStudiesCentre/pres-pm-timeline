@@ -85,6 +85,7 @@ h1{
   bottom: 7px;
   width: 0;
   height: 0;
+  /*opacity: 0.8;*/
   border-style: solid;
 }
 .timeline ul li:nth-child(odd) div{
@@ -92,18 +93,19 @@ h1{
 }
 
 .timeline ul li:nth-child(odd) div::before{
-  left: -15px;
+ /* left: -15px;*/
   border-width: 8px 16px 8px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent transparent transparent transparent;
 }
 .timeline ul li:nth-child(even) div{
   left: -439px;
 }
 
 .timeline ul li:nth-child(even) div::before{
-  right: -15px;
+  /*right: -15px;*/
+   opacity: 0.8;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent transparent;
 }
 time{
   z-index: 1;
@@ -120,11 +122,13 @@ hr{
   border-top: 10px  double black;
   /*margin-left:20px;*/
 /*  margin: 1em 0;*/
+  padding-top:10px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
 .hline-bottom{
   padding-bottom: 20px;
+  padding-top:10px;
   padding-left:20px;
   border-bottom: 4px dashed #000; 
 }
@@ -135,18 +139,17 @@ hr{
   background: rgba(0,157,227,1);
 }
 .timeline ul li div{
-  visibility: hidden;
+  visibility: all;
   z-index: 1;
- /* visibility: visible;*/
-  /*opacity: 1;*/
-/*    transition: background 1s ease-in-out; */
-/*  transition: all .5s ease-in-out;*/
+  visibility: visible;
+  /* transition: background 1s ease-in-out;*/
+  transition: all .1s ease-in-out;
 }
 .timeline ul li:nth-child(odd) div{
-  transform: translate3d(200px, 0, 0);
+  /*transform: translate3d(200px, 0, 0);*/
 }
 .timeline ul li:nth-child(even) div{
-  transform: translate3d(-200px, 0, 0);
+  /*transform: translate3d(-200px, 0, 0);*/
 }
 .timeline ul li.in-view div{
   transform: none;
@@ -967,19 +970,19 @@ $('#search').keyup(function() {
     }).hide();
 });
 
-//     $('#search').bind('keyup change', function(ev) {
-//         // pull in the new value
-//         var searchTerm = $(this).val();
+    // $('#search').bind('keyup change', function(ev) {
+    //     // pull in the new value
+    //     var searchTerm = $(this).val();
 
-//         // remove any old highlighted terms
-//         $('body').removeHighlight();
+    //     // remove any old highlighted terms
+    //     $('body').removeHighlight();
 
-//         // disable highlighting if empty
-//         if ( searchTerm ) {
-//             // highlight the new term
-//             $('body').highlight( searchTerm );
-//         }
-//     });
+    //     // disable highlighting if empty
+    //     if ( searchTerm ) {
+    //         // highlight the new term
+    //         $('body').highlight( searchTerm );
+    //     }
+    // });
 
 //     $(function() {
 //   $("input").on("input.highlight", function() {
