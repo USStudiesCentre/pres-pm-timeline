@@ -939,7 +939,7 @@ input[type=text]{
       }
     }
     // listen for events
-   // window.addEventListener("load", callbackFunc);
+    window.addEventListener("load", callbackFunc);
     window.addEventListener("resize", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
   })();
@@ -967,19 +967,19 @@ $('#search').keyup(function() {
     }).hide();
 });
 
-    $('#search').bind('keyup change', function(ev) {
-        // pull in the new value
-        var searchTerm = $(this).val();
+//     $('#search').bind('keyup change', function(ev) {
+//         // pull in the new value
+//         var searchTerm = $(this).val();
 
-        // remove any old highlighted terms
-        $('body').removeHighlight();
+//         // remove any old highlighted terms
+//         $('body').removeHighlight();
 
-        // disable highlighting if empty
-        if ( searchTerm ) {
-            // highlight the new term
-            $('body').highlight( searchTerm );
-        }
-    });
+//         // disable highlighting if empty
+//         if ( searchTerm ) {
+//             // highlight the new term
+//             $('body').highlight( searchTerm );
+//         }
+//     });
 
 //     $(function() {
 //   $("input").on("input.highlight", function() {
